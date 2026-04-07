@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🚀 Job Recommendations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #262048;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #FFD700;
+      font-weight: 700;
+    }
+
+    .card {
+      background-color: #054070;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    }
+
+    .card h5 {
+      color: #FFD700;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-weight: 500;
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
+    .score {
+      font-weight: bold;
+      color: #00FFAA;
+    }
+
+    .missing-skills {
+      color: #55ffff;
+      font-weight: 500;
+    }
+
+    .progress {
+      height: 20px;
+      border-radius: 10px;
+      background: #1b1b4e;
+    }
+
+    .progress-bar {
+      background: linear-gradient(to right, #00FFAA, #00CC88);
+      font-weight: bold;
+    }
+
+    .back-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .skills-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .skills-icons span {
+      background: #00FFAA;
+      color: #341f51;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      transition: transform 0.2s;
+    }
+
+    .skills-icons span.missing {
+      background: #FF5555;
+      color: #fff;
+    }
+
+    .job-icon {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .card-section {
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+
+    .job-section {
+      background-color: #2A2A2A;
+    }
+
+    .missing-section {
+      background-color: #3A1A1A;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>🚀 Your Recommended Jobs</h2>
+
+    {% if results %}
+      <div class="row">
+        {% for r in results %}
+          <div class="col-md-4">
+            <div class="card p-3">
+
+              <!-- Job Recommendation Section -->
+              <div class="card-section job-section">
+                <div class="d-flex align-items-center mb-2">
+                    <img src="{{ url_for('serve_img', filename=r.image) }}" class="job-icon" alt="Job Icon">
+                    <h5>{{ r.job }}</h5>
+                </div>
+
+                <p class="section-title">Score:</p>
+                <p class="score">{{ r.score }}</p>
+
+                {% set total_skills = r.job_skills | length %}
+                {% set matched_skills_count = r.matched_skills | length %}
+                {% set percent = (matched_skills_count / total_skills * 100) | round(0) %}
+
+                <p class="section-title">Skills Matched:</p>
+                <div class="progress mb-2">
+                  <div class="progress-bar" role="progressbar" style="width: {{ percent }}%;">
+                    {{ percent }}%
+                  </div>
+                </div>
+
+                <div class="skills-icons">
+                  {% for skill in r.job_skills %}
+                    {% if skill in r.matched_skills %}
+                      <span>{{ skill }}</span>
+                    {% else %}
+                      <span class="missing">{{ skill }}</span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+
+              <!-- Missing Skills Section -->
+              <div class="card-section missing-section">
+                <p class="section-title">Missing Skills:</p>
+                {% if r.missing %}
+                  <span class="missing-skills">{{ r.missing | join(', ') }}</span>
+                {% else %}
+                  <span class="text-success">None 🎉</span>
+                {% endif %}
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="text-center mt-5">No jobs found for your skills 😔</p>
+    {% endif %}
+
+    <div class="back-btn">
+      <a href="/upload" class="btn btn-warning btn-lg">⬅ Go Back</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

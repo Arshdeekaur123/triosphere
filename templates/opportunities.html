@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Portal</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f5f7fa;
+            text-align: center;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .btn {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .blue { background: #2d6cdf; }
+        .green { background: #28a745; }
+        .red { background: #dc3545; }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Internship Opportunities</h1>
+
+<div class="container">
+
+    <!-- Web Dev -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+        <div class="card-content">
+            <h2>Web Development Internship</h2>
+            <p>Build websites using HTML, CSS, JS</p>
+            <p><b>Certificate:</b> Provided</p>
+            <p><b>Stipend:</b> ₹5000/month</p>
+
+            <a href="webdev.html">
+                <button class="btn blue">Apply Now</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Python -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+        <div class="card-content">
+            <h2>Python Internship</h2>
+            <p>Work with Django, APIs</p>
+            <p><b>Certificate:</b> Provided</p>
+            <p><b>Stipend:</b> ₹4000/month</p>
+
+            <a href="python.html">
+                <button class="btn green">Apply Now</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Data Science -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+        <div class="card-content">
+            <h2>Data Science Internship</h2>
+            <p>ML, AI, Data Analysis</p>
+            <p><b>Certificate:</b> Provided</p>
+            <p><b>Stipend:</b> ₹6000/month</p>
+
+            <a href="datascience.html">
+                <button class="btn red">Apply Now</button>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

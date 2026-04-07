@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to
+fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet " 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+integrity="sha384
+9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+crossorigin="anonymous">
+    <title>Hello, the world!</title>
+  </head>
+  <body>
+   
+
+<nav class="navbar navbar-expand-lg   shadow-sm fixed-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center me-4" href="#">
+            <img src="{{ url_for('static', filename='img/logo.jpeg') }}" alt="Logo" width="100" height="100" class="me-3">
+            <strong>SkillGUIDE</strong>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <ul class="navbar-nav me-auto">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " href="#" id="jobsDropdown" role="button" data-bs-toggle="dropdown">
+                        Jobs
+                    </a>
+                    <ul class="dropdown-menu shadow border-0 p-3" aria-labelledby="jobsDropdown">
+                        <li><a class="dropdown-item" href="#">Work From Home</a></li>
+                        <li><a class="dropdown-item" href="#">Full Time</a></li>
+                        <li><a class="dropdown-item" href="#">Part Time</a></li>
+                        <li><a class="dropdown-item" href="#">Hybrid</a></li>
+                        <li><a class="dropdown-item" href="#">Remote</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="internshipDropdown" role="button" data-bs-toggle="dropdown">
+                        Internships
+                    </a>
+                    <ul class="dropdown-menu shadow border-0 p-3" aria-labelledby="internshipDropdown">
+                        <li><a class="dropdown-item" href="#">Software Development Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Web Development Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Frontend Development Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Backend Development Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Full Stack Development Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Data Analyst Intern</a></li>
+                        <li><a class="dropdown-item" href="#">AI / ML Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Cloud Computing Intern</a></li>
+                        <li><a class="dropdown-item" href="#">Cybersecurity Intern</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                        Courses
+                    </a>
+                    <ul class="dropdown-menu shadow border-0 p-3" aria-labelledby="coursesDropdown">
+                        <li><a class="dropdown-item" href="#">Web Development Course</a></li>
+                        <li><a class="dropdown-item" href="#">Frontend Development Course</a></li>
+                        <li><a class="dropdown-item" href="#">Backend Development Course</a></li>
+                        <li><a class="dropdown-item" href="#">Full Stack Development Course</a></li>
+                        <li><a class="dropdown-item" href="#">Data Science & ML Course</a></li>
+                        <li><a class="dropdown-item" href="#">AI & Deep Learning Course</a></li>
+                        <li><a class="dropdown-item" href="#">Cyber Security Course</a></li>
+                        <li><a class="dropdown-item" href="#">Cloud Computing Course</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="ms-auto d-flex">
+            <a href="/login">
+                <button class="btn btn-outline-primary">Login</button>
+            </a>     
+            <a href="/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+<section class="hero text-white d-flex align-items-center" style="background:#0b1f3a; padding:100px 0;">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+
+    <!-- LEFT TEXT -->
+    <div style="max-width:600px;">
+      <h1 class="fw-bold mb-4">
+        Find Your Perfect Career Path Based on Your Skills
+      </h1>
+
+      <p class="mb-4 fs-5">
+        Not sure which job or internship fits you? Upload your resume or enter your skills and get personalized career recommendations instantly.
+      </p>
+
+      <!-- 🔥 BIG BUTTON -->
+      <a href="/upload" class="btn btn-warning btn-lg px-5 py-3 rounded-pill fw-bold shadow">
+        🚀 Analyze My Skills
+      </a>
+
+      <!-- optional second button -->
+      <a href="/upload" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill ms-3">
+        Find Placements
+      </a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div>
+      <img src="{{ url_for('static', filename='img/main.png') }}" class="img-fluid" style="max-width:450px;">
+    </div>
+
+  </div>
+</section>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<section class="py-5 bg-white">
+<div class="container-fluid text-center">
+    <h2 class="text-center fw-bold mb-5">Trusted by Top Companies</h2>
+    <div class="logo-slider">
+      <div class="logo-track">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="logo-img">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="logo-img">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="logo-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="logo-img">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+ <div class="container-fluid px-5">
+    <h2 class="text-center fw-bold  mb-5">Explore Career Paths</h2>
+    <div class="row g-4">
+      <!-- Web Development -->
+      <div class="col-md-3">
+        <div class="card shadow-lg h-100 text-center p-5 rounded-4 career-card">
+             <img src="{{ url_for('static', filename='img/web.png') }}" class="card-img-top mx-auto mb-3 img-fluid" alt="Web Development Image">
+              <h5 class="fw-bold fs-5">Web Development</h5>
+          <p class="text-muted fs-5">Frontend, Backend, Full Stack Development</p>
+          <a href="/webroad" class="btn btn-primary mt-auto fs-5">
+    View Roadmap
+</a>
+        </div>
+      </div>
+      <!-- Data Science -->
+      <div class="col-md-3">
+        <div class="card shadow-lg h-100 text-center rounded-4 p-5 career-card">
+             <img src="{{ url_for('static', filename='img/datasci.png') }}" class="card-img-top mx-auto mb-3 img-fluid" alt="Web Development Image">
+          <h5 class="fw-bold fs-5">Data Science</h5>
+          <p class="text-muted fs-5">Data Analysis, ML, AI Models</p>
+          <button href="/roadmapdatascience" class="btn btn-primary mt-auto fs-5">
+            View Roadmap
+          </button>
+        </div>
+      </div>
+      <!-- AI / ML -->
+      <div class="col-md-3">
+        <div class="card shadow-lg h-100 text-center rounded-4 p-5 career-card">
+             <img src="{{ url_for('static', filename='img/ai.png') }}" class="card-img-top mx-auto mb-3 img-fluid" alt="Web Development Image">
+          <h5 class="fw-bold fs-5 ">AI / ML</h5>
+          <p class="text-muted fs-5">Deep Learning & Neural Networks</p>
+          <button href="/roadmapai" class="btn btn-primary mt-auto fs-5">
+            View Roadmap
+          </button>
+        </div>
+      </div>
+      <!-- Cyber Security -->
+      <div class="col-md-3">
+        <div class="card shadow-lg h-100 text-center rounded-4 p-5 career-card">
+             <img src="{{ url_for('static', filename='img/cyber.png') }}" class="card-img-top mx-auto mb-3 img-fluid" alt="Web Development Image">
+          <h5 class="fw-bold fs-5">Cyber Security</h5>
+          <p class="text-muted fs-5">Ethical Hacking & Security Systems</p>
+          <button href="/roadmacyber" class="btn btn-primary mt-auto fs-5">
+            View Roadmap
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5" style="background-color:#f3f4f8;"> <div class="container-fluid px-5">
+    <h2 class="text-center fw-bold fs-3 mb-5">Our Internship Programs</h2>
+    <div class="row g-3">
+    <!-- Web Internship -->
+    <div class="col-md-4">
+      <div class="card text-center p-4 shadow custom-card">
+        <h5 class="fw-bold fs-5">Web Development Internship</h5>
+<p class=" fs-7">Build modern and responsive websites using HTML, CSS, JavaScript, and backend technologies. </p>
+<p class=" fs-8"><strong>Duration:</strong> 3 Months</p>
+<p class=" fs-8"><strong>Mode:</strong> Online / Offline</p>
+<p class=" fs-8"><strong>Certificate:</strong> Provided</p>     
+<p class=" fs-8"><strong>Stipend:</strong> ₹5000/month</p>
+        <a href="/opportunities" class="btn btn-primary">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Python Internship -->
+    <div class="col-md-4">
+      <div class="card text-center p-4 shadow custom-card">
+        <h5 class=" fs-5 fw-bold">Python Internship</h5>
+        <p class=" fs-8">Learn Python programming with hands-on projects. Gain experience in Django, Flask, APIs, and automation tools used in real-world applications.</p>
+<p class=" fs-8"><strong>Duration:</strong> 2 Months</p>
+<p class=" fs-8"><strong>Mode:</strong> Online</p>
+<p class=" fs-8"><strong>Certificate:</strong> Provided</p>
+        <p class =" fs-8"><strong>Stipend:</strong> ₹4000/month</p>
+        <a href="/opportunities" class="btn btn-success">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Data Science Internship -->
+    <div class="col-md-4">
+      <div class="card text-center p-4 shadow custom-card">
+        <h5 class="fw-bold fs-5 ">Data Science Internship</h5>
+<p class=" fs-8">Work on data analysis, machine learning models, and AI-based projects. Learn tools like Pandas, NumPy, and data visualization techniques.</p>
+<p class=" fs-8"><strong>Duration:</strong> 4 Months</p>
+<p class=" fs-8"><strong>Mode:</strong> Hybrid</p>
+<p class=" fs-8"><strong>Certificate:</strong> Provided</p>        
+<p class=" fs-8"><strong>Stipend:</strong> ₹6000/month</p>
+        <a href="/opportunities" class="btn btn-danger">Apply Now</a>
+      </div>
+    </div>
+
+  
+  </div>
+</div>
+</section>
+
+<section class="py-5 text-white" style="background-color:#0b1f3a;">
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <!-- IMAGE (smaller width) -->
+      <div class="col-md-5">
+        <img src="{{ url_for('static', filename='img/robo.png') }}" class="img-fluid" style="ms-5 ;max-width:400px" alt="">
+      </div>
+
+      <!-- TEXT (bigger width) -->
+      <div class="col-md-7">
+        <h1 class="fw-bold mb-4" style="font-size:35px;">Build Your Future in IT Industry</h1>
+
+        <p class="lead mb-5" style="font-size:20px;">
+          Gain real-world experience through internships and skill-based programs
+          designed to prepare you for high-demand IT careers.
+        </p>
+
+        <a href="/explore" class="btn btn-light rounded-pill px-4 py-2">
+          Explore Programs 
+        </a>
+      </div>
+ 
+    </div>
+
+  </div>
+</section>
+
+
+<div class="container text-center mb-5 pt-5">
+  <h2 class="fw-bold display-6 fs-4">What Our Students Say</h2>
+  <p class="text-muted col-lg-8 fs-7 fw-bold mx-auto" >
+    Discover how our career-focused training programs helped students build
+    real-world skills and launch successful careers in Web Development,
+    Data Science, AI/ML, and Cyber Security.
+  </p>
+  
+
+<p class="col-lg-7 mx-auto fs-6 fw-bold mt-3">
+  Their success stories reflect our dedication to practical learning,
+  mentorship, and industry-ready training.
+</p>
+</div>
+
+<section id="testimonial" class=" pt-1 py-5" style="background:#ffffff;">
+  <div class="container">
+
+    <h2 class="text-center text-white mb-9">Testimonial</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="testimonial-card text-center p-4 rounded-4">
+
+              <img src="{{ url_for('static', filename='img/f1.png') }}"
+                   class="rounded-circle mb-4 testimonial-img"
+                   width="100" height="100" alt="">
+
+              <p class="text-light" style="font-size:15px">
+                "Highly recommend this platform for IT career growth."
+              </p>
+
+              <h6 class="text-success mt-3 fs-8">Johnthan Doe - UX Designer</h6>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="testimonial-card text-center p-4 rounded-4">
+
+              <img src="{{ url_for('static', filename='img/f2.png') }}"
+                   class="rounded-circle mb-4 testimonial-img"
+                   width="100" height="100" alt="">
+
+              <p class="text-light" style="font-size:15px">
+                "Amazing learning experience and very supportive mentors."
+              </p>
+
+              <h6 class="text-success mt-5 fs-8">Maccy Doe - Front End</h6>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="testimonial-card text-center p-4 rounded-4">
+
+              <img src="{{ url_for('static', filename='img/f3.png') }}"
+                   class="rounded-circle mb-4 testimonial-img"
+                   width="100" height="100" alt="">
+
+              <p class="text-light" style="font-size:15px">
+                "Highly recommend this platform for IT career growth."
+              </p>
+
+              <h6 class="text-success mt-3 fs-8">Johnthan Doe - UX Designer</h6>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bootstrap Icons CDN (Keep in <head>) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<footer class="text-light pt-5" style="background-color:#0b1f3a;">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- About -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3">SkillGuide</h5>
+        <p class="text-light opacity-75">
+          Build your future in IT with industry-ready programs in Web Development,
+          Data Science, AI/ML and Cyber Security.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a href="#" class="text-decoration-none text-light opacity-75">Home</a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="text-decoration-none text-light opacity-75">Programs</a>
+          </li>
+          <li class="mb-2">
+            <a href="#" class="text-decoration-none text-light opacity-75">Testimonials</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-light opacity-75">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Career Paths -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3">Career Paths</h6>
+        <ul class="list-unstyled text-light opacity-75">
+          <li class="mb-2">Web Development</li>
+          <li class="mb-2">Data Science</li>
+          <li class="mb-2">AI / ML</li>
+          <li>Cyber Security</li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="fw-bold mb-3">Contact Us</h6>
+
+        <p class="mb-2 text-light opacity-75">
+          <i class="bi bi-envelope-fill me-2"></i> info@skillguide.com
+        </p>
+
+        <p class="mb-3 text-light opacity-75">
+          <i class="bi bi-telephone-fill me-2"></i> +91 98765 43210
+        </p>
+
+        <div>
+          <a href="#" class="text-light me-3 fs-5">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="text-light me-3 fs-5">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-light me-3 fs-5">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-light fs-5">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="text-center pb-3">
+      <small class="text-light opacity-75">
+        © 2026 TechCareer. All Rights Reserved.
+      </small>
+    </div>
+
+  </div>
+</footer>
+
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>

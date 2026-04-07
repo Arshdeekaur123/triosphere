@@ -1,0 +1,12 @@
+[
+    {
+        "username": "arsh",
+        "email": "kaurdeeparsh07@gmail.com",
+        "password": "scrypt:32768:8:1$uU5ALjHa9Po3E3Fy$d397e9078ed9f253a5bd0cf3cd421e337701c19ece9bef568deb831afc2dfc0299d0cff85b5f7826286637fbe545e5c0ae4b96633b46e64ef29e646f11155588"
+    },
+    {
+        "username": "dfg",
+        "email": "fgh",
+        "password": "scrypt:32768:8:1$tX98inf7qRkKRc25$740b9be0f04059ca94d7dea80f5f46f0f201883b6d71917c64d6eff0b35dc5eb45efcff24e9fc5256c42be6f21a04d3215b68586c9f57f6fae56a0ed2adf8d56"
+    }
+]

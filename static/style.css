@@ -1,0 +1,251 @@
+body {
+    padding-top: 120px;
+    font-size: 16px;
+}
+
+.navbar {
+    padding: 5px 10px;
+    background-color: #fdfdfd !important; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, padding 0.3s ease;
+    z-index: 1000;
+}
+
+.navbar-brand strong {
+    font-size: 30px !important;
+}
+.nav-link {
+    font-size: 16px !important;
+    margin-right: 15px;
+}
+
+.btn {
+    font-size: 16px !important;
+    padding: 8px 18px; 
+}
+
+.btn-outline-primary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: #0b1a2b;
+}
+
+.btn-primary {
+    background-color: #4da3ff;
+    border-color: #4da3ff;
+}
+
+.btn-primary:hover {
+    background-color: #2f8cff;
+    border-color: #2f8cff;
+}
+
+.dropdown-menu {
+    background-color: #1a2533;
+}
+
+.dropdown-item {
+    font-size: 18px;
+}
+
+.dropdown-item:hover {
+    background-color: #0b1a2b;
+    color: #add1f7;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 10%;
+    background-color:#0b1f3a;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 90%;
+    height: auto;
+}
+
+.main-btn {
+    background-color: #0074D9;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.main-btn:hover {
+    background-color: #0056b3;
+}
+
+.logo-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.logo-img {
+    height: 50px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.logo-slider::before,
+.logo-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-slider::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.logo-slider::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}
+
+.card.custom-card {
+    color: #4f4e4e;
+    background-color: white;
+    border-radius: 18px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.career-card {
+    padding: 3rem 2rem;
+}
+
+.career-card h5 {
+    font-size: 12px;
+}
+
+.career-card p {
+    font-size: 8px;
+}
+
+.career-card .btn {
+    font-size: 16px;
+    padding: 6px 14px;
+}
+
+.custom-card h5 {
+    font-size: 22px;
+}
+
+.custom-card p {
+    font-size: 14px;
+}
+.career-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.custom-card .btn {
+    font-size: 12px;
+    padding: 6px 14px;
+}
+
+.testimonial-card {
+  background:#0b1f3a;
+  max-width: 750px;   
+  width: 1000px;
+  font-size: 10px;
+}
+
+.testimonial-img {
+  border: 3px solid #00ff66;
+  padding: 3px;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: #00ff66;
+}
+
+footer h5, footer h6 {
+    font-size: 18px;
+}
+
+footer p, footer li {
+    font-size: 14px;
+}
+
+footer .fs-5 {
+    font-size: 14px !important;
+}
+
+.hero .col-md-7 h1 {
+    font-size: 40px;
+}
+
+.hero .col-md-7 p.lead {
+    font-size: 20px;
+}

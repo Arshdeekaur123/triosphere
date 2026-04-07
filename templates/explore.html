@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Opportunities - SkillGuide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #eef2f7;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0b1f3a, #112b4d);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .btn-custom {
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 25px;
+      padding: 10px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 60px 0 40px;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 15px;
+      transition: 0.3s;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #0b1f3a;
+      color: white;
+      padding: 50px 0;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero text-center">
+  <div class="container">
+    <h1>Explore Career Opportunities</h1>
+    <p class="mt-3 fs-5">Discover courses, internships, and top companies</p>
+    <a href="#sections" class="btn btn-custom mt-3">Get Started</a>
+  </div>
+</section>
+
+<div class="container" id="sections">
+
+  <!-- COURSES -->
+  <h2 class="section-title">Courses</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Web Development</h5>
+          <p>HTML, CSS, JavaScript, React</p>
+          <a href="webdev.html" class="btn btn-primary btn-sm">View Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Data Science</h5>
+          <p>Python, ML, Data Analysis</p>
+          <a href="datascience.html" class="btn btn-primary btn-sm">View Courses</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>AI / ML</h5>
+          <p>Deep Learning, Neural Networks</p>
+          <a href="aiml.html" class="btn btn-primary btn-sm">View Courses</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- INTERNSHIPS -->
+  <h2 class="section-title">Internships</h2>
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Web Dev Internship</h5>
+          <p>Work on real-world projects</p>
+          <a href="webintern.html" class="btn btn-success btn-sm">Apply</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Python Internship</h5>
+          <p>Hands-on coding experience</p>
+          <a href="pythonintern.html" class="btn btn-success btn-sm">Apply</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-custom">
+        <img src="https://images.unsplash.com/photo-1534759846116-5799c33ce22a" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Data Science Internship</h5>
+          <p>ML & data projects</p>
+          <a href="dsintern.html" class="btn btn-success btn-sm">Apply</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- COMPANIES -->
+  <h2 class="section-title">Top Companies</h2>
+  <div class="row g-4 text-center">
+
+    <div class="col-md-3 col-6">
+      <div class="card card-custom p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" style="height:80px; object-fit:contain;">
+        <p class="mt-2">Google</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card card-custom p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" style="height:80px; object-fit:contain;">
+        <p class="mt-2">Amazon</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card card-custom p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" style="height:80px; object-fit:contain;">
+        <p class="mt-2">Microsoft</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-6">
+      <div class="card card-custom p-3">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" style="height:80px; object-fit:contain;">
+        <p class="mt-2">Netflix</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer style="background:#0b2545; color:white; padding:40px 60px;">
+
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; max-width:1100px; margin:auto;">
+
+        <div style="flex:1; min-width:220px; margin-bottom:20px; padding-left:10px;">
+            <h2 style="margin-bottom:10px;">SkillGuide</h2>
+            <p style="font-size:14px; line-height:1.6;">
+                Build your future in IT with industry-ready programs in Web Development, Data Science, AI/ML and Cyber Security.
+            </p>
+        </div>
+
+        <div style="flex:1; min-width:150px; margin-bottom:20px;">
+            <h3>Quick Links</h3>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Home</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Programs</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Testimonials</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Contact</a></p>
+        </div>
+
+        <div style="flex:1; min-width:150px; margin-bottom:20px;">
+            <h3>Career Paths</h3>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Web Development</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Data Science</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">AI / ML</a></p>
+            <p><a href="#" style="color:#ccc; text-decoration:none;">Cyber Security</a></p>
+        </div>
+
+        <div style="flex:1; min-width:200px; margin-bottom:20px;">
+            <h3>Contact Us</h3>
+            <p style="font-size:14px;">📧 info@skillguide.com</p>
+            <p style="font-size:14px;">📞 +91 98765 43210</p>
+            <p style="font-size:14px;">🌐 www.skillguide.com</p>
+        </div>
+
+    </div>
+
+    <div style="text-align:center; border-top:1px solid #444; padding-top:15px; margin-top:20px; font-size:14px;">
+        © 2026 TechCareer. All Rights Reserved.
+    </div>
+
+</footer>
+
+</body>
+</html>

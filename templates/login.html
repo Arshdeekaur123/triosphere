@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login - SkillGUIDE</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0b2a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 800px;
+    background: #0f3a63;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Left side */
+.left {
+    flex: 1;
+    padding: 40px;
+    color: white;
+}
+
+.left h1 {
+    margin-bottom: 10px;
+}
+
+.left p {
+    color: #cbd5e1;
+}
+
+/* Right side */
+.right {
+    flex: 1;
+    background: white;
+    padding: 40px;
+}
+
+.right h2 {
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #fbbf24;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f59e0b;
+}
+
+/* Link */
+.link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.link a {
+    color: #2563eb;
+    text-decoration: none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <h1>SkillGUIDE</h1>
+        <p>Find your perfect career path based on your skills.</p>
+        <p style="margin-top:30px;">
+            Login to access personalized recommendations and opportunities.
+        </p>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="right">
+        <h2>Login</h2>
+
+        <input type="email" id="email" placeholder="Enter Email">
+        <input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="window.location.href='/login'">Login</button>
+        <div class="link">
+            Don't have an account? <a href="/signup">Sign Up</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+async function login() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const res = await fetch("/login-user", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    alert(data.message);
+
+    // Redirect after login
+    if (data.message === "Login successful") {
+        window.location.href = "/upload";
+    }
+}
+</script>
+
+</body>
+</html>
